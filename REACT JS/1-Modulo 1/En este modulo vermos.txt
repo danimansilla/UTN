@@ -1,0 +1,39 @@
+En esta módulo veremos ....
+Módulo 1
+
+Nivelación, Javascript y configuración del entorno
+
+En este módulo podrán conocer:
+
+¿Qué es HTML?
+Un nuevo estándar para una nueva Web, HTML 5
+Cuáles son las novedades de HTML 5
+Un poco mas de HTML
+CSS (Hojas de estilo en cascada)
+Clases CSS
+Javascript
+Javascript – DOM
+Sintaxis
+Variables
+Operadores
+Estructuras
+Funciones – Arrays
+Formularios
+Campos de texto
+Checkbox
+Select
+Eventos
+Seleccionar elemento e imprimir en html
+Definir una constante
+Let
+Función Arrow
+Clases
+Template Strings
+Valores por defecto
+Módulos
+React JS
+Virtual DOM
+Ventajas de utilizar React JS
+Node JS
+Crear una aplicación utilizando el CLI
+Nivelación, Javascript y configuración del entorno
