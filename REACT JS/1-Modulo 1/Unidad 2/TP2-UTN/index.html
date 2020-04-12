@@ -1,0 +1,70 @@
+<!--Trabajo práctico Unidad N° 2 (optativo)
+Consigna:
+
+Desarrollador una calculadora que tenga:
+
+2 campos inputs para los operadnos
+4 botones de operadores básicos (suma, resta, multiplicación, división)
+Al realizar la cuenta se deberá actualizar el campo resultado
+
+Formato de entrega:
+
+Enviar un archivo .rar o .zip con el siguiente formato: apellido_unidad1.rar
+
+Dentro del .rar o .zip se debe enviar el/los archivos html, css y js
+
+Fechas de entrega:
+
+Se prodra entregar esta unidad:
+
+Desde: 27/02/2020 23:55 hs
+Hasta: 11/03/2020 23:55 hs
+* El tamaño máximo del archivo permitido es de 10 MB. No se permite mas de un archivo.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+
+</head>
+<body class="body">
+
+<h1 class="titulo">Bienvenido a la calculadora de Angela Mansilla</h1>
+<h2  class="subtitulo">A continuacion: ingresar los números y luego elegir la operacion:</h2>
+<form class="form">
+<div layout="colum">
+    <div layout="row">
+        <label class="campoLabel">Ingresar el primer número</label>
+        <input class="campo" type="number" value="num1" id="num1">
+    </div>
+    <div layout="row">
+        <label class="campoLabel">Ingresar el segundo número</label>
+        <input class="campo" type="number" value="num2" id="num2">
+    </div>
+</div>
+<div layout="colum">
+    <div flex>
+        <input type="button" class="operacion"  name="sumar" id="sumar" value="+" >
+        <input type="button" class="operacion" name="restar" id="restar" value="-">
+    </div>
+    <div flex>
+        <input type="button" class="operacion" name="multiplicar" id="multiplicar" value="*">
+        <input type="button" class="operacion" name="dividir" id="dividir"  value="/">
+    </div>  
+</div>
+
+
+<div layout="row">
+    <input type="button" onclick="resolver()" value="resultado" flex>
+    <button type="reset" id="borrar" onclick="resetear()" flex>Borrarlo todo</button>
+</div>
+
+<div id="result"></div>
+
+    
+</form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="./js/script.js"></script>
+
+</html>

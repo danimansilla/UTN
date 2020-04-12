@@ -1,0 +1,45 @@
+.body{
+    width: 50%;
+    height: 50%;
+    /* background: cornsilk; */
+    padding: 40px;
+    /* margin: 8px 0; */
+    margin: 50px;
+    border: 4px solid ;
+}
+/* .titulo{
+    background: cadetblue;
+} */
+/* 
+.campo{
+
+    height: 50%;
+}*/
+.campoLabel {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.campo {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .operacion{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: initial;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;  
+  }
