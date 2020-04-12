@@ -1,0 +1,57 @@
+<html class="fondoContacto">
+<head>
+        <link rel="stylesheet" type="text/css" href="./CSS/estilosContacto.css">
+
+</head>
+<body>
+        <h1>Seguros no pagamos</h1>
+        <ul>
+            <li><a  href="#">Home</a></li>
+            <li><a href="#" class="active">Contacto</a></li>
+          </ul>
+
+<div id="contenedor">
+	<h1>Página de contacto</h1>
+<form id="form" name="form" method="POST">
+
+
+
+<label for="nombre">Nombre</label>
+<input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre">
+
+<label for="apellido">Apellido</label>
+<input id="apellido" name="apellido" type="text" placeholder="Escribe tu apellido">
+
+<label for="dni">DNI</label>
+<input type="text" name="dni" id="dni" placeholder="Introduzca su DNI" pattern="[0-9]{8}" title="Debe poner 8 números"/>
+
+
+<label for="email">Email</label>
+<input id="email" name="email" type="email" placeholder="ejemplo@um.es">
+
+<label for="telefono">Teléfono</label>
+<input id="telefono" name="telefono" type="tel" placeholder="Ej. +34668899999">
+
+<label for="seguro">Seleccione el tipo de seguro</label>
+		    <select required id="seguro" >
+		    	<option value="0">Ingrese opción..</option>
+
+		    	<option value="1">Básico</option>
+
+		    	<option value="2">Intermedio</option>
+		    	<option value="3">Premium</option>
+		    </select>
+
+
+<button type="submit" onclick="validar();" >Enviar formulario</button>
+<button type="reset">Borrar</button>
+
+
+</form>
+</div>
+    
+</body >
+
+<script type="text/javascript" src="./JS/miJavascript.js"></script>
+
+</html>
