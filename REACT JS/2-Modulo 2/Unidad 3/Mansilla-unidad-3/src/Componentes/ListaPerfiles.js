@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 import './Estilo.css'
 class ListaPerfiles extends Component{
     constructor(props){
@@ -15,6 +16,7 @@ class ListaPerfiles extends Component{
         this.handleClick = this.handleClick.bind(this)
     }
 
+  
     handleClick(){
                 
         if(this.state.estadoAmigo=="Eliminar de mis amigos"){
@@ -45,11 +47,14 @@ class ListaPerfiles extends Component{
                 <div className="divAgrupado">
                 <p className="campo">Nombre: {this.props.datos.name}</p>
                 <p className="campo">Apellido: {this.props.datos.username}</p>
+                <div className="divBtnDetalle">
+                    <Link to={'/detalle-perfil/' + this.props.datos.id}>Ver detalle</Link>
+                </div>
                 <div className="divBtnAgregarAmigo"> 
                  {/* if ({this.state.leyenda!==""}) { */}
                      <label className="label"> {this.state.leyenda} </label>  <br/>
                          {/* }                */}
-                <input type="button" className="btnAgregarAmigo" id="nombre" value={this.state.estadoAmigo} onClick={this.handleClick}></input>
+                <input type="button" className="btnAgregarAmigo" id="agregarAmigo" value={this.state.estadoAmigo} onClick={this.handleClick}></input>
                    </div>
                 </div>
                
