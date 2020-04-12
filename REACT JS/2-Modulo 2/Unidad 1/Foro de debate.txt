@@ -1,0 +1,7 @@
+Foro de debate de la Unidad 1 “Componentes. Parte 2 ”
+Mostrar modo 
+Foro de debate de la Unidad 1 “Componentes. Parte 2 ”
+Tuesday, 26 de November de 2019, 12:24
+¿Que código debes introducir para ejecutar la sentencia alert("hola mundo") justo luego de la primer renderizacion del componente?
+
+Solo realizar el código del método a utilizar (sin la sintaxis de clase)

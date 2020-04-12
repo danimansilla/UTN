@@ -1,0 +1,11 @@
+Unidad 3
+
+Desarrollo en react js
+
+En esta unidad podrán conocer:
+
+Map
+Trabajando con nuestra aplicación
+API REST
+Promise
+Aplicando una consulta API a nuestro código
