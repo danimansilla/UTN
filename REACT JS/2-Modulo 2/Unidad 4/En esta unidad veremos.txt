@@ -1,0 +1,16 @@
+En esta unidad veremos ....
+
+
+Unidad 3
+
+Eventos
+
+En esta unidad podrán conocer:
+
+● Eventos con react
+● Cómo declarar los eventos
+● Eventos disponibles en react
+● Cómo recibir parámetros en los eventos
+● Ejemplo aplicado a nuestro código
+
+Última modificación: Tuesday, 18 de February de 2020, 11:35

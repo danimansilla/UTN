@@ -1,0 +1,13 @@
+En esta unidad veremos ....
+Unidad 4
+
+Manejo de rutas
+
+En esta unidad podrán conocer:
+
+React router
+Configurar nuestra aplicación
+Recibir parametros por URL
+Enlaces entre páginas
+Refactorizando nuestra app
+Última modificación: Saturday, 28 de July de 2018, 11:08
