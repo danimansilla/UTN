@@ -1,0 +1,13 @@
+En esta módulo veremos ....
+Módulo 3
+
+Firebase y manejo de estados
+
+
+En este módulo podrán conocer:
+
+● Eventos con react
+● Cómo declarar los eventos
+● Eventos disponibles en react
+● Cómo recibir parámetros en los eventos
+● Ejemplo aplicado a nuestro código
