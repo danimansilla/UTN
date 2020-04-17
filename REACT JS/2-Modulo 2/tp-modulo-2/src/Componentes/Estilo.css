@@ -68,3 +68,37 @@ ul {
     padding: 10px;
     margin: 5px;
   }
+  .li{
+    padding: 10px;
+  }
+  .divLogin{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 60%;
+
+    /* max-width: 600px; */
+    margin-top: 50px;
+    background: #f1f1f1;
+    position: absolute;
+    transform: translate(40%, 0%);
+
+  }
+  .campo1{
+    width: 90%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #dddd;
+  }
+  .form{
+    width: 85%;
+    height: 92%;
+    max-width: 600px;
+    margin-top: 50px;
+    background: #f1f1f1;
+    position: absolute;
+    transform: translate(70%, 0%);
+
+}
