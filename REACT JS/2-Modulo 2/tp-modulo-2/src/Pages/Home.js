@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-import './Estilo.css'
+import './../Componentes/Estilo.css';
 class Home extends Component{
     render(){
       return(
       <div className="col-sm-12 center">
                
-            <div className="jumbotron">
+            {/* <div className="jumbotron">
                 <h1 className="display-3">¡¡Bienvenido!!</h1>
                 <p className="lead">Quedate en casa es un servicio pensado para vos y 
                     ademas te ofrece la más amplia gama de servicios especialmente
@@ -17,7 +17,7 @@ class Home extends Component{
                 <Link to={'/registro'}>Registrarse</Link><br/>
                 <Link to={'/login'}>Login</Link><br/>
                 </p>
-            </div>
+            </div> */}
                       
         </div>
           

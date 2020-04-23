@@ -1,5 +1,5 @@
 import React, {useEffect,useState } from 'react';
-import './Estilo.css'
+import './../Componentes/Estilo.css'
 function DetallePerfil(props){
      const [datos, setDatos] = useState({address:{city:null}, company:{name:null}});
      useEffect(

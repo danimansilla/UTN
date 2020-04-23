@@ -1,11 +1,9 @@
 import React from 'react';
-import './Estilo.css'
-import Menu from './Menu';
+import './../Componentes/Estilo.css';
 function Login(){
   return(
 <div>
-{/* 
-<Menu/> */}
+
    <div className="divLogin">
      
        <form className="form">

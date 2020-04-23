@@ -1,5 +1,5 @@
 import React from 'react';
-import './Registro.css';
+import './../Componentes/Registro.css';
 
 
 function Registro(){

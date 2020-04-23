@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-import './Estilo.css'
+import './../Componentes/Estilo.css'
 class ListaPerfiles extends Component{
     constructor(props){
         super(props);

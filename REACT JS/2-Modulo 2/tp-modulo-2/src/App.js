@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import Menu from './Componentes/Menu';
-import Home from './Componentes/Home';
+import Menu from './Layout/Menu';
+import Home from './Pages/Home';
 import {BrowserRouter, Route} from "react-router-dom";
-import Perfiles from './Componentes/Perfiles';
-import DetallePerfil from './Componentes/DetallePerfil';
-import Login from './Componentes/Login';
-import Registro from './Componentes/Registro';
+import Perfiles from './Pages/Perfiles';
+import DetallePerfil from './Pages/DetallePerfil';
+import Login from './Pages/Login';
+import Registro from './Pages/Registro';
 class App extends Component {
 
   
@@ -14,7 +14,6 @@ class App extends Component {
     return(
     <div className="App">
     <div className="app container">
-      {/* <Menu/> */}
 
     <BrowserRouter>
         <Route component={Menu}/>
