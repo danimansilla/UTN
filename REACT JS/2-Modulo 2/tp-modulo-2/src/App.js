@@ -14,6 +14,7 @@ class App extends Component {
     return(
     <div className="App">
     <div className="app container">
+      {/* <Menu/> */}
 
     <BrowserRouter>
         <Route component={Menu}/>

@@ -1,7 +1,13 @@
 import React from 'react';
+import './Estilo.css'
+import Menu from './Menu';
 function Login(){
   return(
+<div>
+{/* 
+<Menu/> */}
    <div className="divLogin">
+     
        <form className="form">
             <div >
             <label>Usuario</label><br/>
@@ -18,7 +24,7 @@ function Login(){
        
        
    </div>
-     
+   </div>
   )
 }
 export default Login;
