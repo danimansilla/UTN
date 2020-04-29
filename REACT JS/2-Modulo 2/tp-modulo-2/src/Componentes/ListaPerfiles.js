@@ -48,7 +48,7 @@ class ListaPerfiles extends Component{
                 <p className="campo">Nombre: {this.props.datos.name}</p>
                 <p className="campo">Apellido: {this.props.datos.username}</p>
                 <div className="divBtnDetalle">
-                    <Link to={'/detalle-perfil/' + this.props.datos.id}>Ver detalle</Link>
+                    <Link to={'/perfil/' + this.props.datos.id}>Ver detalle</Link>
                 </div>
                 <div className="divBtnAgregarAmigo"> 
                  {/* if ({this.state.leyenda!==""}) { */}

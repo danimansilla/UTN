@@ -26,7 +26,6 @@ function Registro(){
                     <div className="form-group col-sm-12">
                         <label >Dirección de Email</label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar Email"></input>
-                        {/* <small id="emailHelp" className="form-text text-muted">Ingrese una dirección valida.</small> */}
                     </div>
                     <div className="form-group col-sm-12">
                         <label >Password</label>

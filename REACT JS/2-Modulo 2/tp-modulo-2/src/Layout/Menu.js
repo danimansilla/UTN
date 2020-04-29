@@ -8,7 +8,8 @@ class Menu extends Component{
             <div className="titulo">
                     <ul>
                          <li className="li"><Link to={'/'}>Home</Link></li> 
-                         <li className="li"><Link to={'/perfiles'}>Perfiles</Link></li>
+                         <li className="li"><Link to={'/registro'}>Registro</Link></li>
+                         <li className="li"><Link to={'/login'}>Login</Link></li>
                     </ul>
                
             </div>

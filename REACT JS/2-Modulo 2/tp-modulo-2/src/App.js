@@ -3,8 +3,7 @@ import './App.css';
 import Menu from './Layout/Menu';
 import Home from './Pages/Home';
 import {BrowserRouter, Route} from "react-router-dom";
-import Perfiles from './Pages/Perfiles';
-import DetallePerfil from './Pages/DetallePerfil';
+import Perfil from './Pages/Perfil';
 import Login from './Pages/Login';
 import Registro from './Pages/Registro';
 class App extends Component {
@@ -18,8 +17,7 @@ class App extends Component {
     <BrowserRouter>
         <Route component={Menu}/>
         <Route path="/" exact component={Home}/>
-        <Route path="/perfiles" exact component={Perfiles}/>     
-        <Route path="/detalle-perfil/:id" exact component={DetallePerfil}/>
+        <Route path="/perfil/:id" exact component={Perfil}/>
         <Route path="/login" exact component={Login}/>  
         <Route path="/registro" exact component={Registro}/>  
     </BrowserRouter>

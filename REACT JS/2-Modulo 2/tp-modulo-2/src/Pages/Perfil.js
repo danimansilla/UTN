@@ -1,6 +1,6 @@
 import React, {useEffect,useState } from 'react';
 import './../Componentes/Estilo.css'
-function DetallePerfil(props){
+function Perfil(props){
      const [datos, setDatos] = useState({address:{city:null}, company:{name:null}});
      useEffect(
          ()=> {
@@ -40,4 +40,4 @@ function DetallePerfil(props){
     
 
 }
-export default DetallePerfil;
+export default Perfil;
