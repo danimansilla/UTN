@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import './../Componentes/Registro.css';
+import firebase from './../Componentes/Firebase';
 
 
 class Registro extends Component{
