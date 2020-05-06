@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import Menu from './Layout/Menu';
-import Home from './Pages/Home';
+import Home from './Pages/HomePage';
 import {BrowserRouter, Route} from "react-router-dom";
-import Perfil from './Pages/Perfil';
-import Login from './Pages/Login';
-import Registro from './Pages/Registro';
+import Perfil from './Pages/PerfilPage';
+import Login from './Pages/LoginPage';
+import Registro from './Pages/RegistroPage';
 
 import 'firebase/firestore';
 

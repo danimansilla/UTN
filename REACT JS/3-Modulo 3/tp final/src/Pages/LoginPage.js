@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Form,Button} from 'react-bootstrap';
 
-class Login extends Component{
+class LoginPage extends Component{
     constructor(props){
     super(props);
     console.log(this.props.title)
@@ -58,4 +58,4 @@ handleChange(e){
     }
 }
 
-export default Login;
+export default LoginPage;

@@ -12,8 +12,15 @@ var config = {
 
   if (!firebase.apps.length) {
     firebase.initializeApp(config);
+    const db = firebase.firestore();
+    db.settings({
+      timestampsInSnapshots: true
+    });
     firebase.auth = firebase.auth();
+    firebase.db=db;
+    console.log("Ingreso base");
     console.log(firebase);
     
   }
   export default firebase;
+

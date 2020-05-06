@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import './../Componentes/Estilo.css';
 import ListaPerfiles from '../Componentes/ListaPerfiles';
-class Home extends Component{
+class HomePage extends Component{
     perfiles;
     constructor(props){
         super(props);
@@ -71,4 +71,4 @@ class Home extends Component{
    
 //     }
 // }
-export default Home ;
+export default HomePage ;
