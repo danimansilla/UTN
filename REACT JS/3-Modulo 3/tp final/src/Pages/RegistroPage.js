@@ -19,7 +19,7 @@ class RegistroPage extends Component{
         }
     }
     handleSubmit(e){
-        alert('Se registro correctamente: ' + this.state.nombre);
+        
         console.log(this.state)
         firebase.database().ref('usuarios/').set({
                 nombre: this.state.nombre,
@@ -27,6 +27,8 @@ class RegistroPage extends Component{
                 email: this.state.email,
                 password: this.state.password
             });
+            alert('Se registro correctamente: ' + this.state.nombre);
+            
         // let email = this.state.email;
         // let password = this.state.password;
 

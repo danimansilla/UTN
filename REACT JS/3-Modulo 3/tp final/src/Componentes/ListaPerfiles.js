@@ -5,7 +5,7 @@ class ListaPerfiles extends Component{
     constructor(props){
         super(props);
         console.log("props", this.props.datos);
-      
+       console.log("props solo  this.prop", this.props);
         this.state = {
             estadoAmigo:"Agregar a mis amigos",
             leyenda: "",
@@ -27,7 +27,7 @@ class ListaPerfiles extends Component{
         }else{
                 this.setState({
                         estadoAmigo:"Eliminar de mis amigos",
-                        leyenda: `${this.props.datos.username} , ${this.props.datos.name} ahora es tu amiga/o`,
+                        leyenda: `${this.props.datos.nombre} , ${this.props.datos.apellido} ahora es tu amiga/o`,
                         amigos: this.props
                     
                 })
@@ -45,10 +45,10 @@ class ListaPerfiles extends Component{
 
               
                 <div className="divAgrupado">
-                <p className="campo">Nombre: {this.props.datos.name}</p>
-                <p className="campo">Apellido: {this.props.datos.username}</p>
+                <p className="campo">Nombre: {this.props.datos.nombre}</p>
+                <p className="campo">Apellido: {this.props.datos.apellido}</p>
                 <div className="divBtnDetalle">
-                    <Link to={'/perfil/' + this.props.datos.id}>Ver detalle</Link>
+                    <Link to={'/perfil/' + this.props.datos.userId}>Ver detalle</Link>
                 </div>
                 <div className="divBtnAgregarAmigo"> 
                  {/* if ({this.state.leyenda!==""}) { */}

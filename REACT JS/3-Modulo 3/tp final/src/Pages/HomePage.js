@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import './../Componentes/Estilo.css';
 import ListaPerfiles from '../Componentes/ListaPerfiles';
+import firebase from '../Componentes/Firebase';
+
 class HomePage extends Component{
     perfiles;
     constructor(props){
@@ -11,28 +13,52 @@ class HomePage extends Component{
             perfiles :[]
         }
     }
-
-    componentWillMount(){
-        fetch("https://jsonplaceholder.typicode.com/users")
-        .then(res => res.json())
-        .then(
-            (result) => {
-                console.log(result)
-                this.setState({
-                    isLoaded : true,
-                    perfiles : result
-                });
-            },
-            (error) => {
-                console.log(error)
-                this.setState({
-                    isLoaded : true,
-                    error
-                });
-            }
-        )
-  
+    componentDidMount(){
+        // if(localStorage.getItem("login")){
+           firebase.database().ref('usuarios/').once('value').then(snapshot =>{
+               console.log(snapshot.val());
+               this.setState({
+                perfiles: snapshot.val(),
+                isLoaded:true
+               } )
+           })
+            // firebase.db.collection('usuarios/')
+            // .get()
+            // .then(querySnapshot=>{
+            //     console.log("dsads",querySnapshot.docs)
+            //     this.setState({
+            //         perfiles:querySnapshot.docs,
+            //         isLoaded:true
+            //     })
+                
+              
+                
+            // })
+          //  console.log( 'estado'+this.state.perfiles);
+        // }
+        
     }
+    // componentWillMount(){
+    //     fetch("https://jsonplaceholder.typicode.com/users")
+    //     .then(res => res.json())
+    //     .then(
+    //         (result) => {
+    //             console.log(result)
+    //             this.setState({
+    //                 isLoaded : true,
+    //                 perfiles : result
+    //             });
+    //         },
+    //         (error) => {
+    //             console.log(error)
+    //             this.setState({
+    //                 isLoaded : true,
+    //                 error
+    //             });
+    //         }
+    //     )
+  
+    // }
     render(){
         const { error, isLoaded, perfiles} = this.state;
         if(error){
@@ -41,11 +67,14 @@ class HomePage extends Component{
             return <div> Loading...</div>;
         }else{
             return (
-                <ul>
-                    {perfiles.map(
-                        perfil => <ListaPerfiles datos={perfil}/>
-                    )}
-                </ul>
+              <div>
+                    {Object.keys(this.state.perfiles).map((k,v)=>
+                    <ListaPerfiles datos={this.state.perfiles[k]}/>)}
+              </div>
+                  
+               
+                    
+            
             );
         }
    
