@@ -6,30 +6,29 @@ import firebase from '../Componentes/Firebase';
 class LoginPage extends Component{
     constructor(props){
     super(props);
-    console.log(this.props.title)
     this.handleSubmit =  this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.state={
         email:'',
         password:''
     }
-     this.errores= null;
 }
 handleSubmit(e){
-    console.log(this.state)
     let email=this.state.email;
     let password=this.state.password;
+
+
     firebase.auth.signInWithEmailAndPassword(email, password)
-    .then(() => {
+    .then((data) => {
        console.log("Login")
-       
-    })
+       localStorage.setItem('login',JSON.stringify(data.user))
+            const { history } = this.props;
+            history.push('/');
+        })
     .catch(error => {
-        //this.setState(byPropKey('error', error));
 
         console.log("Error",error)
 
-        this.errores= error;
         alert(error);
     });
 
@@ -40,8 +39,8 @@ handleSubmit(e){
 handleChange(e){
     
     const target = e.target;
-   // const value = target.value
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const value = target.value
+  //  const value = target.type === 'checkbox' ? target.checked : target.value;
 
     const name = target.name;
     
@@ -51,12 +50,7 @@ handleChange(e){
     e.preventDefault();
 }
     render(){
-   const { error, isLoaded} = this.state;
-   if(error!= undefined){
-       return(
-                      <div>Error</div>
-       )
-   }
+ 
     return(
        
         <div>
