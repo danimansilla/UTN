@@ -1,89 +1,68 @@
-import React, { Component } from 'react';
-// import './../Componentes/Registro.css';
+import React, {useState, useEffect} from 'react';
+import { useHistory } from "react-router-dom";
 import firebase from '../Componentes/Firebase';
 
 
-class RegistroPage extends Component{
-    constructor(props){
-        super(props);
-        console.log("registro base");
-        console.log(firebase.database());
-        // console.log(this.props.title)
-        this.handleSubmit =  this.handleSubmit.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-        this.state = {
-            nombre:'',
-            apellido:'',
-            email:'',
-            password:''
-        }
+function RegistroPage() {
+    const history = useHistory();
+    const [form, setForm] = useState({nombre:'',apellido:'',email:'',password:''});
+    function handleClick(){
+        
+        history.push("/");
     }
-    handleSubmit(e){
-        
-        //var databaseReference= firebase.getInstance().getReference(); 
-        // var challengeId=databaseReference.push().getKey(); 
-
-
-      //  console.log("databaseReference", databaseReference);
-       // console.log("challengeId", challengeId);
-
-        
-        firebase.database().ref('usuarios/').push({
-                nombre: this.state.nombre,
-                apellido: this.state.apellido,
-                email: this.state.email,
-                password: this.state.password
-               // userId: firebase.getInstance().getReference()
-            });
-          
-            alert('Se registro correctamente: ' + this.state.nombre);
-            
-        // let email = this.state.email;
-        // let password = this.state.password;
-
-
-        // firebase.auth.createUserWithEmailAndPassword(email, password)
-        // .then(() =>{
-        //     console.log("Usuario creado");
- 
-        // })
-        // .catch((error) =>{
-        //     console.log("Error", error);
-        // })
-        e.preventDefault();
-    
-    }
-
-  
-    handleChange(e){
-        
-        const target = e.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-        
-        this.setState({
-            [name]:value
+    function handleSubmit(e){
+        let email=form.email;
+        let password=form.password;    
+        firebase.auth.createUserWithEmailAndPassword(email, password)
+        .then((data)=>{
+            console.log("Usuario creado",data.user.uid)
+            firebase.db.collection("usuarios").add({
+                nombre: form.nombre,
+                apellido: form.apellido,
+                email: form.email,
+                userId: data.user.uid
+              })
+              .then((data)=>{
+                  console.log(data)
+                  history.push("/login");
+              })
+              .catch((err)=>{
+                console.log(err)
+                })
+        })
+        .catch((error)=>{
+            console.log("Error",error)
         })
         e.preventDefault();
     }
-        render(){
+    function handleChange(e){
 
-   
+        const target = e.target;
+        const value = target.value
+        const name = target.name;
+
+      
+        setForm({
+            ...form,
+            [name] : value});
+        
+    }
+    
     return(
         <div className="container">
-            <form  onSubmit={this.handleSubmit}>
+            <form onSubmit={handleSubmit}>
                  <fieldset>
                  <h2 >Registro de Usuario</h2>   
                  <div className="form-group col-sm-12">
                         <label >Nombre</label>
                         <input type="nombre" className="form-control" id="nombre" aria-describedby="nombre" placeholder="Nombres"
-                        name="nombre" value={this.state.nombre} onChange={this.handleChange}></input>
+                        name="nombre" value={form.nombre} onChange={handleChange}></input>
                        
                     </div>
                     <div className="form-group col-sm-12">
                         <label >Apellido</label>
                         <input type="apellido" className="form-control" id="apellido" aria-describedby="apellido" 
-                        placeholder="Apellido" name="apellido" value={this.state.apellido} onChange={this.handleChange}></input>
+                        placeholder="Apellido" name="apellido" value={form.apellido} onChange={handleChange}></input>
                        
                     </div>
                     {/* <div className="form-group col-sm-12">
@@ -95,12 +74,12 @@ class RegistroPage extends Component{
                     <div className="form-group col-sm-12">
                         <label >Dirección de Email</label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-                        placeholder="Ingresar Email" name="email" value={this.state.email} onChange={this.handleChange}></input>
+                        placeholder="Ingresar Email" name="email" value={form.email} onChange={handleChange}></input>
                     </div>
                     <div className="form-group col-sm-12">
                         <label >Password</label>
                         <input type="password" className="form-control" id="exampleInputPassword1" 
-                        placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange}></input>
+                        placeholder="Password" name="password" value={form.password} onChange={handleChange}></input>
                     </div>
                     {/* <div className="form-group col-sm-12">
                         <label >Confirme Password</label>
@@ -112,10 +91,11 @@ class RegistroPage extends Component{
                     </div>
                 </fieldset>  
             </form>        
-            
+            <button onClick={handleClick} >Ir a home</button>
+
         </div>
     )
-   }
+   
 }
 
 export default RegistroPage;

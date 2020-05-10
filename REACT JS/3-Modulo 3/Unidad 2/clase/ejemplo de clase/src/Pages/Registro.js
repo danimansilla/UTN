@@ -4,7 +4,8 @@ import firebase from '../Config/firebase'
 
 function Registro(){
     const history = useHistory();
-    const [form, setForm] = useState({nombre:'',apellido:'',email:'',password:''});
+    const [form, setForm] 
+    = useState({nombre:'',apellido:'',email:'',password:''});
     function handleClick(){
         
         history.push("/");

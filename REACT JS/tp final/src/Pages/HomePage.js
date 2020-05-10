@@ -10,11 +10,30 @@ class HomePage extends Component{
         this.state = {
             error : null,
             isLoaded : false,
-            perfiles :[]
+            perfiles :[],
+            listaProductos: [],
+            items: []
         }
     }
+ 
     componentDidMount(){
+        const items = [];
         // if(localStorage.getItem("login")){
+          firebase.db.collection("Productos").get()
+          .then(
+              (querySnapShot) => {
+          
+                      querySnapShot.forEach(function(doc) {
+                        items.push(doc.data());
+                    }); 
+                    this.setState({ items: items });
+                    console.log("el "+ items);
+                    console.log("el estado de item"+ this.state.items);
+
+                       
+          });
+
+          
            firebase.database().ref('usuarios/').once('value')
            .then(
                (snapshot) =>{
