@@ -4,75 +4,45 @@ import ListaPerfiles from '../Componentes/ListaPerfiles';
 import firebase from '../Componentes/Firebase';
 
 class HomePage extends Component{
-    perfiles;
-    constructor(props){
-        super(props);
-        this.state = {
-            error : null,
-            isLoaded : false,
-            perfiles :[],
-            listaProductos: [],
-            items: []
+    constructor(){
+        super()
+        this.state={
+            perfiles:[],
+            isLoaded:false
         }
     }
- 
     componentDidMount(){
-        const items = [];
-        // if(localStorage.getItem("login")){
-          firebase.db.collection("Productos").get()
-          .then(
-              (querySnapShot) => {
-          
-                      querySnapShot.forEach(function(doc) {
-                        items.push(doc.data());
-                    }); 
-                    this.setState({ items: items });
-                    console.log("el "+ items);
-                    console.log("el estado de item"+ this.state.items);
-
-                       
-          });
-
-          
-           firebase.database().ref('usuarios/').once('value')
-           .then(
-               (snapshot) =>{
-                    console.log(snapshot.val());
-                    this.setState({
-                        perfiles: snapshot.val(),
-                        isLoaded:true
-                    });
-                },
-                (error) => {
-                    console.log(error)
-                                this.setState({
-                                    isLoaded : true,
-                                    error: error
-                                });
-                });
-    }
-
-    render(){
-        const { error, isLoaded, perfiles} = this.state;
-        if(error){
-            return <div>Error: {error.message}</div>;
-        }else if(!isLoaded){
-            return <div> Loading...</div>;
-        }else{
-            if(this.state.perfiles !=undefined){
-                return ( 
-                    <div>
-                          {Object.keys(this.state.perfiles).map((k,v)=>
-                          <ListaPerfiles datos={this.state.perfiles[k]}/>)}
-                    </div>   )
-            }else{
-                return(
-                <div>
-                    <p>No hay usuarios</p>
-                </div>)
-            }
+        if(localStorage.getItem("login")){
+            firebase.db.collection("Productos")
+            .get()
+            .then(querySnapshot=>{
+                console.log("dsads",querySnapshot.docs)
+                this.setState({
+                    perfiles:querySnapshot.docs,
+                    isLoaded:true
+                })
+                
+                
+            })
         }
-   
+        
+    }
+    render(){
+        if(!this.state.isLoaded){
+            return (
+                <div>
+                    Loading                
+                </div>
+            )
+        }else{
+            return(
+                <div>
+                    {this.state.perfiles.map((doc)=><ListaPerfiles datos={doc.data()} id={doc.id}/>)}
+                    
+                </div>
+            )
+        }
+        
     }
 }
 export default HomePage ;

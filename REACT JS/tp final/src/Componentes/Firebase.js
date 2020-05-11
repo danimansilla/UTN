@@ -26,8 +26,8 @@ var config = {
     });
     firebase.auth = firebase.auth();
     firebase.db=db;
-    console.log("Ingreso base");
-    console.log(firebase);
+    // console.log("Ingreso base");
+    // console.log(firebase);
     
   }
   export default firebase;

@@ -1,59 +1,90 @@
 import React, {useEffect,useState, Component } from 'react';
 import firebase from '../Componentes/Firebase';
+import { useHistory } from "react-router-dom";
 
-class PerfilPage extends Component{
+function PerfilPage(props){
+    const history = useHistory();
 
-    datos;
-    constructor(props){
-        super(props);
-        console.log("perfil page", props);
-        this.state = {
-            error : null,
-            isLoaded : false,
-            datos :[]
-        }
+    const [datos, setDatos] = useState({});
+
+     useEffect(
+        () => {
+            const id = props.match.params.id;
+            firebase.db.doc("Productos/"+id)
+            .get()
+            .then(doc=>{
+                setDatos( doc.data() )
+                console.log(doc.data())
+            })
+    }, []); 
+    const handleClick = ()=>{
+        const id = props.match.params.id;
+        firebase.db.doc("Productos/"+id)
+        .delete()
+        .then(doc=>{
+            console.log(doc)
+            history.push("/");
+        })
     }
+    const handleClickUpdate = ()=>{
+        const id = props.match.params.id;
+        firebase.db.doc("Productos/"+id)
+        .set({
+            nombre:datos.nombre,
+            descripcion:datos.descripcion
+        },{merge:true})
+        .then(doc=>{
+            console.log(doc)
+            history.push("/");
+        })
+    }
+    const handleChange = (e)=>{
+        const target = e.target;
+        const value = target.value
+        const name = target.name;
 
-   
-    componentDidMount(){
-          // firebase.database().ref('usuarios/'+this.props.match.params.id).once('value').then(snapshot =>{
       
-
-            firebase.database().ref('usuarios/'+this.props.match.params.email).once('value').then(snapshot =>{
-               console.log("snapshot",snapshot.val());
-               this.setState({
-                datos: snapshot.val(),
-                isLoaded:true
-               } )
-           })
+        setDatos({
+            ...datos,
+            [name] : value});
+    }  
         
-        
-    }
-    render(){
+ 
 
-        const { error, isLoaded} = this.state;
-        if(error){
-            return <div>Error: {error.message}</div>;
-        }else if(!isLoaded){
-            return <div> Loading...</div>;
-        }else{
+       
             return(
+
+            //     <div>
+
+            //     <div>
+            //         <label>Nombre</label>
+            //         <input type="text" name="nombre" value={datos.nombre} onChange={handleChange}></input>
+            //     </div>
+            //     <div>
+            //         <label>Descripcion</label>
+            //         <input type="text" name="apellido" value={datos.descripcion} onChange={handleChange}></input>
+            //     </div>
+            //     {/* <div>{datos.email}</div> */}
+            //     <button onClick={handleClick}>Eliminar</button>
+            //     <button onClick={handleClickUpdate}>Actualizar</button>
+            // </div>
                 <div>
-                    <h3>Detalle de perfil de:   {this.state.datos.nombre} {this.state.datos.apellido} </h3>
+                    <h3>Detalle de perfil de:   {datos.nombre} {datos.descripcion} </h3>
                     <div>
-                         <p>Nombre: {this.state.datos.nombre}</p>
-                        <p> Apellido: {this.state.datos.apellido}</p> 
-                        <p>Email: {this.state.datos.email}</p> 
-                      
+                         <p>Nombre del producto: {datos.nombre}</p>
+                        <p> Descripcion: {datos.descripcion}</p> 
+                        <p>Precio: {datos.precio}</p> 
+                        <p>Sku: {datos.sku}</p> 
+
                     </div>
                    <div className="divFoto">
                         <img className="foto" src= "../../img/perfil.jpeg"/>
                    </div>
                 </div>
             )
-        }
+        
       
-    }
+    
 }
 
 export default PerfilPage;
