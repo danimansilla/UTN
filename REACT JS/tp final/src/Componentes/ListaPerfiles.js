@@ -1,31 +1,29 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import './../Componentes/Estilo.css'
-function ListaPerfiles({datos,id}){
+function ListaProductos({datos,id}){
   
         return(
-           
-            <div >
-               <div className="divPerfil">
+<div className="row">
 
-              
-                <div className="divAgrupado">
-                <p className="campo">Nombre de producto: {datos.nombre}</p>
-                <p className="campo">Descripcion: {datos.descripcion}</p>
-                <div className="divBtnDetalle">
-                   
-                    <Link to={'/perfil/' + id}>Ver detalle</Link>
-                </div>
-              
-               
-                <div className="divFoto">
-                    <img className="foto" src= "../../img/perfil.jpeg"/>
-               </div>
-               </div>
-              
 
+
+            <div className="col-md-3">
+            <div className="card card-product-gried">
+            <p className="campo">Nombre de producto: {datos.nombre}</p>
+            <p className="campo">Descripcion: {datos.descripcion}</p>
+          
+
+            <div className="divBtnDetalle">
+                
+                <Link to={'/producto/' + id}>Ver detalle</Link>
+            </div>
+            <div className="divFoto">
+                <img className="fotoProducto" src= "../../img/barbijo.jpg"/>
+            </div>
+            </div>
             </div>
             </div>
         ) 
 }
-export default ListaPerfiles;
+export default ListaProductos;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-// import './../Componentes/Estilo.css';
-import ListaPerfiles from '../Componentes/ListaPerfiles';
 import firebase from '../Componentes/Firebase';
+import ListaProductos from '../Componentes/ListaPerfiles';
 
 class HomePage extends Component{
     constructor(){
@@ -37,7 +36,11 @@ class HomePage extends Component{
         }else{
             return(
                 <div>
-                    {this.state.perfiles.map((doc)=><ListaPerfiles datos={doc.data()} id={doc.id}/>)}
+                    <div>
+                           <img  fluid flex style={{marginTop: 30}} src= "../../img/carro.jpg"/> 
+                    </div>
+                    <h2>Productos Nuevos!</h2>
+                    {this.state.perfiles.map((doc)=><ListaProductos datos={doc.data()} id={doc.id}/>)}
                     
                 </div>
             )

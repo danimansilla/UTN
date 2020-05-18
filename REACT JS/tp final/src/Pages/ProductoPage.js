@@ -2,7 +2,7 @@ import React, {useEffect,useState, Component } from 'react';
 import firebase from '../Componentes/Firebase';
 import { useHistory } from "react-router-dom";
 
-function PerfilPage(props){
+function ProductoPage(props){
     const history = useHistory();
 
     const [datos, setDatos] = useState({});
@@ -78,7 +78,8 @@ function PerfilPage(props){
 
                     </div>
                    <div className="divFoto">
-                        <img className="foto" src= "../../img/perfil.jpeg"/>
+                   
+                        <img className="fotoProducto" src= "../../img/barbijo.jpg"/>
                    </div>
                 </div>
             )
@@ -87,4 +88,4 @@ function PerfilPage(props){
     
 }
 
-export default PerfilPage;
+export default ProductoPage;
