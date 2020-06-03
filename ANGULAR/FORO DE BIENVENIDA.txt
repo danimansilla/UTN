@@ -1,0 +1,14 @@
+Foro de bienvenida
+Hola a todas y a todos!
+
+Mi nombre es Leandro Gil Carrano, en el año 2015 egrese de la carrera de Ingeniería en sistemas de Información en la Universidad Tecnológica Nacional - Facultad Regional Buenos Aires. 
+
+Como docente actualmente me desempeño en el nivel secundario para adultos y asi mismo en cursos de desarrollo web y aplicaciones moviles brindados por el departamento de extensión universitaria de esta Universidad.
+
+En el año 2010 comencé mi carrera profesional como desarrollador PHP, ampliando mis conocimientos en SQL, CSS, HTML, Javascript y Angular.
+
+Actualmente me desempeño como líder de proyecto en una software factory, he liderado grandes desarrollos de sitios institucionales, sistemas de información, diarios digitales y aplicaciones móviles.
+
+Por lo mencionado anteriormente he podido combinar dos pasiones personales, la docencia y los sistemas informáticos.
+
+Ing Leandro Gil Carrano
