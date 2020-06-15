@@ -1,0 +1,1 @@
+Que son los pipes - Algunas directivas, ngStyle, ngClass, ngSwitch - Directivas personalizadas - Introducción a los módulos en Angular
