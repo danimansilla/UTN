@@ -1,0 +1,6 @@
+Desarrollo en React .JS
+Leandro Gil Carrano
+El "Desarrollo en React JS", tiene como objetivo: "Aplicar y adaptar los conocimientos en programación web al desarrollo de aplicaciones SPA explotando las ventajas brindadas por Reac en cuanto al flujo de datos".
+Deseo que este trayecto sea sumamente enriquecedor, tanto para Uds. como para mí .......
+
+Un saludo afectuoso.
