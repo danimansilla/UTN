@@ -1,0 +1,14 @@
+<div>
+    <input type="text" [(ngModel)]="numero">
+    <button (click)="adivinar()">Adivinar</button>
+    <div *ngIf="numero==numero_adivinar">
+        <div [class]="cssGano">{{mensaje}} NgIf</div>
+    </div>
+    <div [hidden]="numero!=numero_adivinar" [ngClass]="{gano:numero==numero_adivinar,perdio:numero!=numero_adivinar}">{{mensaje}}</div>
+    <div [appResaltado]="'orange'">resaltado</div>
+
+    <div *ngFor="let producto of productos">
+        <div>{{producto.id}}</div>
+        <div>{{producto.nombre}}</div>
+    </div>
+</div>
