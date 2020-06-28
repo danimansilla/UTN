@@ -1,0 +1,2 @@
+Git, la guía sencilla
+Haga clic en el enlace https://rogerdudler.github.io/git-guide/index.es.html para abrir el recurso.
