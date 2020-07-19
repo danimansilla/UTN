@@ -1,0 +1,12 @@
+En esta unidad veremos ....
+Unidad 1
+
+Nombre de la unidad
+
+En esta unidad:
+
+Sabrán cómo crear módulos exportando nuestras funciones.
+Sabrán cómo incluir módulos con require.
+Conocerán algunos de los métodos importantes de algunos módulos incluidos en Node JS y sabrán utilizarlos.
+Conocerán el uso de eventos.
+Última modificación: Saturday, 25 de June de 2016, 13:05

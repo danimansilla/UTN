@@ -1,0 +1,13 @@
+Presentación del profesor/es
+Mi nombre es Leandro Gil Carrano, en el año 2015 egresé de la carrera de Ingeniería en sistemas de Información en la Universidad Tecnológica Nacional - Facultad Regional Buenos Aires. 
+
+Como docente actualmente me desempeño en el nivel secundario para adultos y así mismo en cursos de desarrollo web y aplicaciones móviles brindados por el departamento de extensión universitaria de esta Universidad.
+
+En el año 2010 comencé mi carrera profesional como desarrollador PHP, ampliando mis conocimientos en SQL, CSS, HTML, Javascript y Angular.
+
+Actualmente me desempeño como líder de proyecto en una software factory, he liderado grandes desarrollos de sitios institucionales, sistemas de información, diarios digitales y aplicaciones móviles.
+
+Por lo mencionado anteriormente he podido combinar dos pasiones personales, la docencia y los sistemas informáticos.
+
+
+Última modificación: Saturday, 20 de June de 2020, 21:48

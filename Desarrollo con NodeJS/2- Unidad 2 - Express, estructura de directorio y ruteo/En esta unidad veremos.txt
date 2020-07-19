@@ -1,0 +1,11 @@
+En esta unidad veremos ....
+Unidad 2
+
+NodeJS Packages - Express, estructura de directorio y ruteo
+
+Al terminar la Unidad los participantes:
+
+Uso de framework Express para crear proyectos con NodeJs
+Modificar estructura de directorio de express bajo MVC
+Ruter de express
+Última modificación: Monday, 29 de June de 2020, 19:12

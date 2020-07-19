@@ -1,0 +1,8 @@
+Desarrollo con NodeJS
+
+El curso tiene como objetivo que se introduzcan en la programacion de aplicaciones utilizando Javascript del lado del servidor persiguiendo como objetivo fundamentalmente que desarrollen aplicaciones mas rapidas y eficientes.
+
+Ese es el propósito de este framework, implementa operaciones de entrada y salida, está basado en eventos, streams y está construido encima del motor de Javascript V8, que es con el que funciona el Javascript de Google Chrome. Basándose en los conceptos de la programación asíncrona y la programación orientada a eventos.
+
+
+Deseo que este trayecto sea sumamente enriquecedor, tanto para Uds. como para mí ....... Un saludo afectuoso.
